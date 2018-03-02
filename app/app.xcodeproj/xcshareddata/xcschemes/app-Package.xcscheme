@@ -56,6 +56,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "KituraCORS::KituraCORS"
+               BuildableName = "KituraCORS.framework"
+               BlueprintName = "KituraCORS"
+               ReferencedContainer = "container:app.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "Health::Health"
                BuildableName = "Health.framework"
                BlueprintName = "Health"
