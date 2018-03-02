@@ -52,6 +52,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		84C34E4220493F5E0019BDB5 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C34E4120493F5E0019BDB5 /* Models.swift */; };
 		OBJ_1012 /* WSConnectionUpgradeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_142 /* WSConnectionUpgradeFactory.swift */; };
 		OBJ_1013 /* WSFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_143 /* WSFrame.swift */; };
 		OBJ_1014 /* WSFrameParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_144 /* WSFrameParser.swift */; };
@@ -2325,6 +2326,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84C34E4120493F5E0019BDB5 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		"CircuitBreaker::CircuitBreaker::Product" /* CircuitBreaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CircuitBreaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CloudEnvironment::CloudEnvironment::Product" /* CloudEnvironment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CloudEnvironment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CloudFoundryEnv::CloudFoundryEnv::Product" /* CloudFoundryEnv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CloudFoundryEnv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3909,7 +3911,7 @@
 			path = ".build/checkouts/SwiftMetrics.git-8417478658542232501/Sources/SwiftMetricsDash";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -3919,7 +3921,6 @@
 				OBJ_20 /* Dependencies */,
 				OBJ_345 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_50 /* omr-agentcore 3.2.4-swift4 */ = {
@@ -4055,6 +4056,7 @@
 				OBJ_10 /* InitializationError.swift */,
 				OBJ_11 /* Metrics.swift */,
 				OBJ_12 /* Routes */,
+				84C34E4120493F5E0019BDB5 /* Models.swift */,
 			);
 			name = Application;
 			path = Sources/Application;
@@ -5264,7 +5266,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_345 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -5694,6 +5696,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_385 /* Package.swift in Sources */,
+				84C34E4220493F5E0019BDB5 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
