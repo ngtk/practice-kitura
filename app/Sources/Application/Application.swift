@@ -35,9 +35,9 @@ public class App {
     }
     
     func configureCors() {
-			let options = Options(allowedOrigin: .all)
-			let cors = CORS(options: options)
-			router.all("/*", middleware: cors)
+        let options = Options(allowedOrigin: .all)
+        let cors = CORS(options: options)
+        router.all("/*", middleware: cors)
     }
 
     public func run() throws {
