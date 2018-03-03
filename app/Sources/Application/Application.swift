@@ -30,13 +30,7 @@ public class App {
         // Cors
         configureCors()
 
-        // Hello world
-        router.get("/") {
-            request, response, next in
-            response.send("Hello, World!")
-            next()
-        }
-
+        // Routings
         router.post("/", handler: storeHandler)
         router.delete("/", handler: deleteAllHandler)
         router.get("/", handler: getAllHandler)
