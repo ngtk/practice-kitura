@@ -52,7 +52,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		84C34E4220493F5E0019BDB5 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C34E4120493F5E0019BDB5 /* Models.swift */; };
+		84C34E43204A46110019BDB5 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C34E4120493F5E0019BDB5 /* Models.swift */; };
 		OBJ_1012 /* WSConnectionUpgradeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_142 /* WSConnectionUpgradeFactory.swift */; };
 		OBJ_1013 /* WSFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_143 /* WSFrame.swift */; };
 		OBJ_1014 /* WSFrameParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_144 /* WSFrameParser.swift */; };
@@ -5696,7 +5696,6 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_385 /* Package.swift in Sources */,
-				84C34E4220493F5E0019BDB5 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5901,6 +5900,7 @@
 				OBJ_700 /* InitializationError.swift in Sources */,
 				OBJ_701 /* Metrics.swift in Sources */,
 				OBJ_702 /* HealthRoutes.swift in Sources */,
+				84C34E43204A46110019BDB5 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
