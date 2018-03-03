@@ -38,6 +38,7 @@ public class App {
         }
 
         router.post("/", handler: storeHandler)
+        router.delete("/", handler: deleteAllHandler)
     }
 
     func storeHandler(todo: ToDo, completion: (ToDo?, RequestError?) -> Void ) {
@@ -52,6 +53,13 @@ public class App {
             todoStore.append(todo)
         }
         completion(todo, nil)
+    }
+
+    func deleteAllHandler(completion: (RequestError?) -> Void ) {
+        execute {
+            todoStore = [ToDo]()
+        }
+        completion(nil)
     }
     
     func configureCors() {
