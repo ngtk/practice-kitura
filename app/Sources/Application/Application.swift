@@ -42,6 +42,7 @@ public class App {
         router.get("/", handler: getAllHandler)
         router.get("/", handler: getOneHandler)
         router.patch("/", handler: updateHandler)
+        router.delete("/", handler: deleteOneHandler)
     }
 
     func storeHandler(todo: ToDo, completion: (ToDo?, RequestError?) -> Void ) {
@@ -85,6 +86,15 @@ public class App {
             todoStore[idPosition] = current
         }
         completion(todoStore[idPosition], nil)
+    }
+
+    func deleteOneHandler(id: Int, completion: (RequestError?) -> Void ) {
+        guard let idMatch = todoStore.first(where: { $0.id == id }),
+            let idPosition = todoStore.index(of: idMatch) else { return }
+        execute {
+            todoStore.remove(at: idPosition)
+        }
+        completion(nil)
     }
     
     func configureCors() {
