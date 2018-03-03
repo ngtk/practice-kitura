@@ -6,6 +6,7 @@ import CloudEnvironment
 import KituraContracts
 import Health
 import KituraCORS
+import Dispatch
 
 public let projectPath = ConfigurationManager.BasePath.project.path
 public let health = Health()
@@ -13,6 +14,9 @@ public let health = Health()
 public class App {
     let router = Router()
     let cloudEnv = CloudEnv()
+    private var todoStore = [ToDo]()
+    private var nextId :Int = 0
+    private let workerQueue = DispatchQueue(label: "worker")
 
     public init() throws {
         // Run the metrics initializer
@@ -32,6 +36,22 @@ public class App {
             response.send("Hello, World!")
             next()
         }
+
+        router.post("/", handler: storeHandler)
+    }
+
+    func storeHandler(todo: ToDo, completion: (ToDo?, RequestError?) -> Void ) {
+        var todo = todo
+        if todo.completed == nil {
+            todo.completed = false
+        }
+        todo.id = nextId
+        todo.url = "http://localhost:8080/\(nextId)"
+        nextId += 1
+        execute {
+            todoStore.append(todo)
+        }
+        completion(todo, nil)
     }
     
     func configureCors() {
@@ -44,5 +64,11 @@ public class App {
         try postInit()
         Kitura.addHTTPServer(onPort: cloudEnv.port, with: router)
         Kitura.run()
+    }
+
+    func execute(_ block: (() -> Void)) {
+        workerQueue.sync {
+            block()
+        }
     }
 }
