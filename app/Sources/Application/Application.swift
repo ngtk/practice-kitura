@@ -40,6 +40,7 @@ public class App {
         router.post("/", handler: storeHandler)
         router.delete("/", handler: deleteAllHandler)
         router.get("/", handler: getAllHandler)
+        router.get("/", handler: getOneHandler)
     }
 
     func storeHandler(todo: ToDo, completion: (ToDo?, RequestError?) -> Void ) {
@@ -65,6 +66,10 @@ public class App {
 
     func getAllHandler(completion: ([ToDo]?, RequestError?) -> Void ) {
         completion(todoStore, nil)
+    }
+
+    func getOneHandler(id: Int, completion: (ToDo?, RequestError?) -> Void ) {
+        completion(todoStore.first(where: {$0.id == id }), nil)
     }
     
     func configureCors() {
